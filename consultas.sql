@@ -24,3 +24,14 @@ inner join historico
 on disciplina.idDisciplina = historico.idDisciplina
 group by 2
 order by medianota desc;
+
+
+
+/* Implemente uma consulta para listar o nome de todos os cursos e a
+ quantidade de alunos em cada curso. Para isso, utilize os comandos join e group by.  */ 
+select curso.nome as 'nomeCurso', count(alunocurso.idAluno) as 'qtdAluno' 
+from curso
+inner join alunocurso 
+on curso.idCurso = alunocurso.idCurso
+group by alunocurso.idCurso;
+
